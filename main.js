@@ -420,11 +420,11 @@
 const btnBasket = document.querySelector(".basket");
 const btnCart = document.querySelector(".cart");
 const btnCancel = document.querySelector(".cancel");
+const body = document.querySelector("#body");
 // Logic
 btnBasket.addEventListener("click",function () {
     btnCart.classList.toggle("hidden")
 });
-
 btnCancel.addEventListener("click", function() {
     btnCart.classList.toggle("hidden")
 })
