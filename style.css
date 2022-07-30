@@ -2,3 +2,56 @@
 *{
     font-family: 'Open Sans', sans-serif;
 }
+
+@media only screen and (max-width:600px){
+    header{
+        height: 100vh;
+    }
+    
+    header ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+    }
+
+    ul li a{
+        font-size: 14px;
+    }
+
+    .basket{
+        display: none;
+    }
+
+    .header-text h2{
+        margin-top: 50px;
+    }
+
+    .header-text p{
+        width: 350px;
+        margin: auto;
+    }
+
+    .logo{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo svg{
+        display: block;
+        background-color: #dd2222;
+        color: white;
+        border-radius: 5px;
+    }
+
+    .to-top-btn{
+        position: sticky;
+        top: 450px;
+    }
+
+    .titles h1{
+        margin: auto;
+    }
+
+}
