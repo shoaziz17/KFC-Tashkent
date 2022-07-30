@@ -41,22 +41,67 @@
         </div>
     </header>
 
-    <div class="to-top-btn fixed right-0 float-right p-10">
+    <div class="to-top-btn fixed bottom-0 right-0 float-right p-10  ">
         <a href="#header">
-            <button id="" class="border-2 border-[#dd2222] p-2 rounded-full bg-[#dd2222]">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="white" viewBox="0 0 24 24" stroke="white" stroke-width="2">
+            <button  class="border-2 border-[#dd2222] p-2 rounded-full bg-[#dd2222] animate-bounce">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-9 w-9" fill="white" viewBox="0 0 24 24" stroke="white" stroke-width="2">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M5 10l7-7m0 0l7 7m-7-7v18" />
                 </svg>
             </button>
         </a>
     </div>
 
+
+    <div class="basket fixed top-0 right-0 float-right p-10 bg-white p-3 shadow-xl rounded-xl mr-5 cursor-pointer active:scale-95 mt-3">
+        <span class="absolute top-0 right-0 bg-red-500 text-white rounded-full py-[3px] px-[10px]">1</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-bag-plus" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z"/>
+            <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
+          </svg>
+    </div>
+    <div class="cart h-[600px] w-[400px] fixed top-0 right-0 float-right p-10 bg-white p-3 shadow-2xl rounded-xl mt-3 mr-3 overflow-auto hidden">
+        <div class="border-b border-gray-300 w-full py-1">
+            <h1 class="font-bold ml-2">CART</h1>
+        </div>
+        <!-- Form -->
+        <div class="my-3 space-y-3 flex flex-col w-[350px] mx-auto">
+            <h1 class="font-bold text-lg">Billing details</h1>
+            <label for="name">Name</label>
+            <input class="w-[300px] h-10 border border-gray-300 rounded-lg p-3" type="text" id="name">
+            <label for="phone_number">Phone</label>
+            <input class="w-[300px] h-10 border border-gray-300 rounded-lg p-3" type="number" id="phone_number">
+            <label for="email">Email</label>
+            <input class="w-[300px] h-10 border border-gray-300 rounded-lg p-3" id="email" type="email">
+            <label for="area">Area</label>
+            <input class="w-[300px] h-10 border border-gray-300 rounded-lg p-3" type="text" id="area">
+            <label for="address">Address</label>
+            <input class="w-[300px] h-10 border border-gray-300 rounded-lg p-3" placeholder="House number and street name" type="text" id="adrdress">
+            <label for="apartment">Apartment/house number</label>
+            <input class="w-[300px] h-10 border border-gray-300 rounded-lg p-3" type="text" id="aapartment">
+            <label for="entrance">Entrance</label>
+            <input class="w-[300px] h-10 border border-gray-300 rounded-lg p-3" type="text" id="entrance">
+            <label for="floor">Floor</label>
+            <input class="w-[300px] h-10 border border-gray-300 rounded-lg p-3" type="text" id="floor">
+            <label for="intercom">Intercom</label>
+            <input class="w-[300px] h-10 border border-gray-300 rounded-lg p-3" type="text" id="fintercom">
+            <div class="detailes my-5">
+                <h1 class="font-bold text-lg">Details</h1>
+                <h1 class="text-sm text-slate-500 font-semibold mt-3">Order note</h1>
+                <textarea placeholder="Notes about your order,such as special requests to the shipping depertament" class="w-[300px] h-20 border border-gray-300 rounded-lg p-3" id="orderNote" cols="30" rows="10"></textarea>
+            </div>
+        </div>
+        <!-- Form -->
+        <div class="cancel fixed bottom-0 right-0 float-right p-10 mb-3 ml-3 cursor-pointer duration-200 active:scale-95">
+            <img src="https://tashkentkfc.me/wp-content/plugins/xt-woo-floating-cart/public/assets/img/close.svg" alt="">
+        </div>
+    </div>
+
     <!--Titles of sections-->
     <div class="titles | p-[30px]">
-        <h1 class="text-center text-[red] font-bold text-[27px]">BASKETS</h1>
+        <h1 id="baskets" class="text-center text-[red] font-bold text-[27px]">BASKETS</h1>
     </div>
    
-    <section id="baskets" class="bg-gray-100 py-10">
+    <section class="bg-gray-100 py-10">
         <div class="container mx-auto h-[100%] w-4/5">
             
                 <div class="grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-4  my-10">
@@ -272,10 +317,10 @@
        </section> 
 
     <div class="titles | p-[30px]">
-        <h1 class="text-center text-[red] font-bold text-[27px]">BURGERS</h1>
+        <h1 id="burgers" class="text-center text-[red] font-bold text-[27px]">BURGERS</h1>
     </div>
 
-    <section id="burgers" class="bg-gray-100 py-10">
+    <section  class="bg-gray-100 py-10">
         <div class="container mx-auto h-[100%] w-4/5">
             
                 <div class="grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-4  my-10">
@@ -491,11 +536,11 @@
        </section> 
     
 
-    <div class="titles | p-[30px]">
-        <h1 class="text-center text-[red] font-bold text-[27px]">TWISTERS</h1>
+    <div  class="titles | p-[30px]">
+        <h1 id="twisters" class="text-center text-[red] font-bold text-[27px]">TWISTERS</h1>
     </div>
 
-    <section id="twisters" class="bg-gray-100 py-10">
+    <section  class="bg-gray-100 py-10">
         <div class="container mx-auto h-[100%] w-4/5">
             
                 <div class="grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-4  my-10">
@@ -711,10 +756,10 @@
        </section> 
 
     <div class="titles | p-[30px]">
-        <h1 class="text-center text-[red] font-bold text-[27px]">CHICKEN</h1>
+        <h1 id="chicken" class="text-center text-[red] font-bold text-[27px]">CHICKEN</h1>
     </div>
 
-    <section id="chicken" class="bg-gray-100 py-10">
+    <section  class="bg-gray-100 py-10">
         <div class="container mx-auto h-[100%] w-4/5">
             
                 <div class="grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-4  my-10">
@@ -930,10 +975,10 @@
        </section> 
 
     <div class="titles | p-[30px]">
-        <h1 class="text-center text-[red] font-bold text-[27px]">FRENCH FRIES</h1>
+        <h1 id="fries" class="text-center text-[red] font-bold text-[27px]">FRENCH FRIES</h1>
     </div>
 
-    <section id="fries" class="bg-gray-100 py-10">
+    <section class="bg-gray-100 py-10">
         <div class="container mx-auto h-[100%] w-4/5">
             
                 <div class="grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-4  my-10">
@@ -1149,10 +1194,10 @@
        </section> 
 
     <div class="titles | p-[30px]">
-        <h1 class="text-center text-[red] font-bold text-[27px]">SAUCES</h1>
+        <h1 id="sauces" class="text-center text-[red] font-bold text-[27px]">SAUCES</h1>
     </div>
 
-    <section id="sauces" class="bg-gray-100 py-10">
+    <section  class="bg-gray-100 py-10">
         <div class="container mx-auto h-[100%] w-4/5">
             
                 <div class="grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-4  my-10">
@@ -1368,10 +1413,10 @@
        </section> 
 
     <div class="titles | p-[30px]">
-        <h1 class="text-center text-[red] font-bold text-[27px]">BEVERAGES</h1>
+        <h1 id="beverages" class="text-center text-[red] font-bold text-[27px]">BEVERAGES</h1>
     </div>
 
-    <section id="beverages" class="bg-gray-100 py-10">
+    <section  class="bg-gray-100 py-10">
         <div class="container mx-auto h-[100%] w-4/5">
             
                 <div class="grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-4  my-10">
@@ -1587,10 +1632,10 @@
        </section> 
 
     <div class="titles | p-[30px]">
-        <h1 class="text-center text-[red] font-bold text-[27px]">DESSERTS</h1>
+        <h1 id="desserts" class="text-center text-[red] font-bold text-[27px]">DESSERTS</h1>
     </div>
 
-    <section id="desserts" class="bg-gray-100 py-10">
+    <section  class="bg-gray-100 py-10">
         <div class="container mx-auto h-[100%] w-4/5">
             
                 <div class="grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-4  my-10">
