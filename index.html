@@ -59,12 +59,12 @@
             <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
           </svg>
     </div>
-    <div class="cart h-[600px] w-[400px] fixed top-0 right-0 float-right p-10 bg-white p-3 shadow-2xl rounded-xl mt-3 mr-3 overflow-auto hidden">
+    <div class="cart h-[600px] w-[400px] fixed top-0 right-0 float-right p-10 bg-white p-3 shadow-2xl rounded-xl mt-3 mr-3 overflow-auto">
         <div class="border-b border-gray-300 w-full py-1">
             <h1 class="font-bold ml-2">CART</h1>
         </div>
         <!-- Form -->
-        <div class="my-3 space-y-3 flex flex-col w-[350px] mx-auto">
+        <div class="my-3 space-y-3 flex flex-col w-[350px] mx-auto border-b border-gray-300 pb-5">
             <h1 class="font-bold text-lg">Billing details</h1>
             <label for="name">Name</label>
             <input class="w-[300px] h-10 border border-gray-300 rounded-lg p-3" type="text" id="name">
@@ -87,8 +87,13 @@
             <div class="detailes my-5">
                 <h1 class="font-bold text-lg">Details</h1>
                 <h1 class="text-sm text-slate-500 font-semibold mt-3">Order note</h1>
-                <textarea placeholder="Notes about your order,such as special requests to the shipping depertament" class="w-[300px] h-20 border border-gray-300 rounded-lg p-3" id="orderNote" cols="30" rows="10"></textarea>
+                <textarea placeholder="Notes about your order,such as special requests to the shipping depertament" class="w-[300px] h-28 border border-gray-300 rounded-lg p-3" id="orderNote" cols="30" rows="10"></textarea>
             </div>
+            <div class="payment my-5 flex items-center space-x-3">
+                <input class="h-5 w-5" type="radio" id="check">
+                <label for="check" class="font-bold text-lg text-slate-700 font-semibold ">Payment Methods</label>
+            </div>
+            <h1 class="font-bold text-[14px] text-slate-700 font-semibold">Payment in cash upon delivery of the order.</h1>
         </div>
         <!-- Form -->
         <div class="cancel fixed bottom-0 right-0 float-right p-10 mb-3 ml-3 cursor-pointer duration-200 active:scale-95">
@@ -97,7 +102,7 @@
     </div>
 
     <!--Titles of sections-->
-    <div class="titles | p-[30px]">
+     <div class="titles | p-[30px]">
         <h1 id="baskets" class="text-center text-[red] font-bold text-[27px]">BASKETS</h1>
     </div>
    
@@ -1636,7 +1641,7 @@
     </div>
 
     <section  class="bg-gray-100 py-10">
-        <div class="container mx-auto h-[100%] w-4/5">
+        <div class="container mx-auto h-[100%] w-4/5"> -->
             
                 <div class="grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-4  my-10">
                     <div class="food-card">
@@ -1846,12 +1851,10 @@
                         </div>
                     </div>
                   </div>
-            
         </div>
        </section> 
-
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="main.js"></script>   
+       <script src="https://cdn.tailwindcss.com"></script>
+       <script src="main.js"></script>   
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
 </body>
 </html>
