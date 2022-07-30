@@ -420,11 +420,17 @@
 const btnBasket = document.querySelector(".basket");
 const btnCart = document.querySelector(".cart");
 const btnCancel = document.querySelector(".cancel");
-const body = document.querySelector("#body");
+const burgerBtn = document.querySelector("#burger-btn");
+const nav = document.querySelector("nav");
+
 // Logic
 btnBasket.addEventListener("click",function () {
     btnCart.classList.toggle("hidden")
 });
 btnCancel.addEventListener("click", function() {
     btnCart.classList.toggle("hidden")
+})
+// Burger menu
+burgerBtn.addEventListener("click",function() {
+    nav.classList.toggle("mobile-nav")
 })

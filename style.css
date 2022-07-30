@@ -2,6 +2,9 @@
 *{
     font-family: 'Open Sans', sans-serif;
 }
+html {
+    scroll-behavior: smooth;
+  }
 
 @media only screen and (max-width:600px){
     header{
@@ -13,6 +16,9 @@
         flex-direction: column;
         justify-content: start;
         align-items: center;
+    }
+    .mobile-nav{
+        display: none;
     }
 
     ul li a{
