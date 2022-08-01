@@ -28,6 +28,10 @@ html {
     ul li a{
         font-size: 14px;
     }
+    ul li{
+        padding: 10px;
+        margin:0;
+    }
 
     .basket{
         display: none;

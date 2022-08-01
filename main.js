@@ -431,6 +431,6 @@ btnCancel.addEventListener("click", function() {
 });
 // Burger menu
 burgerBtn.addEventListener("click",function() {
-    nav.classList.toggle("mobile-nav")
+    nav.classList.toggle("mobile-nav");
 })
 // Burger menu
