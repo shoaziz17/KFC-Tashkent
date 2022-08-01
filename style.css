@@ -12,7 +12,7 @@ html {
 
 @media only screen and (max-width:600px){
     header{
-        height: 100vh;
+        height: 100%;
     }
     
     header ul {
@@ -58,10 +58,6 @@ html {
     .to-top-btn{
         position: sticky;
         top: 450px;
-    }
-
-    .titles h1{
-        margin: auto;
     }
 
 }
