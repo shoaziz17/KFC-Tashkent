@@ -422,6 +422,7 @@ const btnCart = document.querySelector(".cart");
 const btnCancel = document.querySelector(".cancel");
 const burgerBtn = document.querySelector("#burger-btn");
 const nav = document.querySelector("nav");
+const headerText = document.querySelector(".header-text");
 // Logic
 btnBasket.addEventListener("click",function () {
     btnCart.classList.toggle("hidden")
@@ -431,6 +432,7 @@ btnCancel.addEventListener("click", function() {
 });
 // Burger menu
 burgerBtn.addEventListener("click",function() {
-    nav.classList.toggle("mobile-nav")
+    nav.classList.toggle("mobile-nav");
+    headerText.classList.toggle("hidden")
 })
 // Burger menu
